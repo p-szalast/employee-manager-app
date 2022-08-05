@@ -1,0 +1,65 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices m:DataServiceVersion="1.0" m:MaxDataServiceVersion="3.0"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+		<Schema Namespace="LocalMockData" 
+			xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+			xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+			<EntityType Name="Product">
+				<Key>
+					<PropertyRef Name="ProductID"/>
+				</Key>
+				<Property Name="ProductName" Type="Edm.String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false"/>
+				<Property Name="ProductID" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="SupplierID" Type="Edm.Int32" Nullable="true"/>
+				<Property Name="CategoryID" Type="Edm.Int32" Nullable="true"/>
+				<Property Name="QuantityPerUnit" Type="Edm.String" Nullable="true" MaxLength="20" Unicode="true" FixedLength="false"/>
+				<Property Name="UnitPrice" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4"/>
+				<Property Name="UnitsInStock" Type="Edm.Int16" Nullable="true"/>
+				<Property Name="UnitsOnOrder" Type="Edm.Int16" Nullable="true"/>
+				<Property Name="Discontinued" Type="Edm.Boolean" Nullable="false"/>
+			
+			</EntityType>
+			<EntityType Name="Supplier">
+				<Key>
+					<PropertyRef Name="SupplierID"/>
+				</Key>
+				<Property Name="ProductName" Type="Edm.String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false"/>
+				<Property Name="ProductID" Type="Edm.Int32" Nullable="false"/>
+				<Property Name="SupplierID" Type="Edm.Int32" Nullable="true"/>
+				<Property Name="CategoryID" Type="Edm.Int32" Nullable="true"/>
+				<Property Name="QuantityPerUnit" Type="Edm.String" Nullable="true" MaxLength="20" Unicode="true" FixedLength="false"/>
+				<Property Name="UnitPrice" Type="Edm.Decimal" Nullable="true" Precision="19" Scale="4"/>
+				<Property Name="UnitsInStock" Type="Edm.Int16" Nullable="true"/>
+				<Property Name="UnitsOnOrder" Type="Edm.Int16" Nullable="true"/>
+				<Property Name="Discontinued" Type="Edm.Boolean" Nullable="false"/>
+			</EntityType>
+			<EntityType Name="Employee">
+				<Key>
+					<PropertyRef Name="EmployeeID"/>
+				</Key>
+				<Property Name="EmployeeID" Type="Edm.Decimal" Nullable="false"/>
+				<Property Name="FirstName" Type="Edm.String" Nullable="false"/>
+				<Property Name="LastName" Type="Edm.String" Nullable="false"/>
+				<Property Name="Country" Type="Edm.String" Nullable="false"/>
+				<Property Name="City" Type="Edm.String" Nullable="false"/>
+				<Property Name="PostCode" Type="Edm.String" Nullable="false"/>
+				<Property Name="Street" Type="Edm.String" Nullable="false"/>
+				<Property Name="PhoneNumber" Type="Edm.String" Nullable="false"/>
+				<Property Name="HouseNumber" Type="Edm.String" Nullable="false"/>
+				<Property Name="PESEL" Type="Edm.Decimal" Nullable="false"/>
+				<Property Name="FlatNumber" Type="Edm.String" Nullable="false"/>
+				<Property Name="Function" Type="Edm.String" Nullable="false"/>
+				<Property Name="Department" Type="Edm.String" Nullable="false"/>
+				<Property Name="CurrentMonthHours" Type="Edm.Decimal" Nullable="false"/>
+			</EntityType>
+			<EntityContainer Name="MockProducts" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Products" EntityType="LocalMockData.Product" />
+				<EntitySet Name="Suppliers" EntityType="LocalMockData.Supplier" />
+				<EntitySet Name="Employees" EntityType="LocalMockData.Employee" />
+			</EntityContainer>
+		</Schema>
+
+	</edmx:DataServices>
+</edmx:Edmx>
+

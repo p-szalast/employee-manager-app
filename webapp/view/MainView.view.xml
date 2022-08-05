@@ -1,0 +1,96 @@
+<mvc:View controllerName="prs.client.controller.MainView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="mainPage" showHeader="false" title="{i18n>title}">
+					<content>
+						<VBox class="sapUiSmallMargin" justifyContent="Center">
+							<f:SimpleForm id="SimpleFormChange480_12120" editable="true" layout="ResponsiveGridLayout" title="{i18n>NewEmployee}" labelSpanXL="4"
+								labelSpanL="4" labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0"
+								columnsXL="2" columnsL="2" columnsM="1" singleContainerFullSize="false">
+								<f:content>
+									<core:Title text="{i18n>PersonalData}"/>
+									<Label text="{i18n>FirstName}"/>
+									<Input class="input" value="{newEmployee>/FirstName}" placeholder="Enter First Name" valueStateText="Enter text" valueState="{appModel>/firstNameState}" valueLiveUpdate="true" change="liveValidateData"/>
+									<Label text="{i18n>LastName}"/>
+									<Input class="input" value="{newEmployee>/LastName}" placeholder="Enter Last Name" valueStateText="Enter text" valueState="{appModel>/lastNameState}" valueLiveUpdate="true" change="liveValidateData"/>
+									<Label text="{i18n>PESELNumber}"/>
+									<Input class="input" value="{newEmployee>/PESEL}" placeholder="Enter PESEL Number" type="Number" valueStateText="Enter 13 digits" valueState="{appModel>/PESELState}" valueLiveUpdate="true" change="liveValidateData"/>
+									<Label text="{i18n>PhoneNumber}"/>
+									<Input class="input" value="{newEmployee>/PhoneNumber}" placeholder="Enter Phone Name" type="Number" valueStateText="Enter number" valueState="{appModel>/phoneNumberState}" valueLiveUpdate="true" change="liveValidateData"/>
+								
+											</f:content>
+										</f:SimpleForm>
+										<f:SimpleForm id="SimpleFormDisplay480_12120-2" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+											labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+											columnsL="2" columnsM="1" singleContainerFullSize="false">
+											<f:content>
+												<core:Title text="{i18n>Address}"/>
+												<Label text="{i18n>Country}"/>
+												<Input class="input" value="{newEmployee>/Country}" placeholder="Enter Contry " valueStateText="Enter text" valueState="{appModel>/countryState}" valueLiveUpdate="true" change="liveValidateData"/>
+												<Label text="{i18n>City}"/>
+												<Input class="input" value="{newEmployee>/City}" placeholder="Enter City" valueStateText="Enter text" valueState="{appModel>/cityState}" valueLiveUpdate="true" change="liveValidateData"/>
+												<Label text="{i18n>PostCode}"/>
+												<Input class="input" value="{newEmployee>/PostCode}" placeholder="Enter Post Code" valueStateText="Enter Post Code" valueState="{appModel>/postCodeState}" valueLiveUpdate="true" change="liveValidateData"/>
+												<Label text="{i18n>Street}"/>
+												<Input class="input" value="{newEmployee>/Street}" placeholder="Enter Street name" valueStateText="Enter text" valueState="{appModel>/streetState}" valueLiveUpdate="true" change="liveValidateData"/>
+												<Label text="{i18n>HouseNumber}"/>
+												<Input class="input" value="{newEmployee>/HouseNumber}" placeholder="Enter House Name" valueStateText="Enter number" valueState="{appModel>/houseNumberState}"/>
+												<Label text="{i18n>FlatNumber}"/>
+												<Input class="input" value="{newEmployee>/FlatNumber}" placeholder="Enter Flat Name" valueStateText="Enter number" valueState="{appModel>/flatNumberState}"/>
+											</f:content>
+										</f:SimpleForm>
+										<f:SimpleForm id="SimpleFormDispla" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4"
+											labelSpanM="12" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2"
+											columnsL="2" columnsM="1" singleContainerFullSize="false">
+											<f:content>
+												<core:Title text="{i18n>EmploymentInformation}"/>
+													<Label text="{i18n>EmployeeID}" />
+													<Input class="input" type="Number" value="{newEmployee>/EmployeeID}" placeholder="Enter 4 Digits ID" valueStateText="Enter 4 Digits" valueState="{appModel>/employeeIDState}" valueLiveUpdate="true" change="liveValidateData"/>
+											<Label text="{i18n>Function}"/>
+												<Select class="input" id="country" selectedKey="{newEmployee>/Function}">
+													<items>
+														<core:Item text="{i18n>Specialist}" key="Specialist"/>
+														<core:Item text="{i18n>Manager}" key="Manager"/>
+														<core:Item text="{i18n>Director}" key="Director"/>
+													</items>
+												</Select>
+											<Label text="{i18n>Department}"/>
+												<Select class="input" id="y" selectedKey="{newEmployee>/Department}">
+													<items>
+														<core:Item text="{i18n>Developer}" key="Developer"/>
+														<core:Item text="{i18n>Sales}" key="Sales"/>
+														<core:Item text="{i18n>Finance}" key="Germany"/>
+													</items>
+												</Select>
+											</f:content>
+										</f:SimpleForm>
+										<FlexBox>
+											<Button class="sapUiTinyMarginTop sapUiTinyMarginEnd" icon="sap-icon://list" text="{i18n>EmployeeList}" press="onNavToEmployeeList"/>
+											<Button class="sapUiTinyMarginTop" type="Emphasized" icon="sap-icon://save" text="{i18n>SaveEmployee}" press="onSaveEmployee" enabled="{appModel>/addEmployeeBtnEnabled}"/>
+										</FlexBox>
+									</VBox>
+								</content>
+									<!--<footer>-->
+									<!--	<OverflowToolbar>-->
+									<!--		<Button id="messagePopoverBtn"-->
+									<!--			icon="sap-icon://error"-->
+									<!--			press="onToggleMessagePopover"-->
+									<!--			/>-->
+												<!--ariaHasPopup="Dialog"/>-->
+									<!--		<ToolbarSpacer/>-->
+									<!--	</OverflowToolbar>-->
+									<!--</footer>-->
+										<footer>
+											<OverflowToolbar>
+												<Button id="messagePopoverBtn"
+													icon="sap-icon://error"
+													press="onShowMessagePopover"/>
+											</OverflowToolbar>
+										</footer>
+							</Page>
+						</pages>
+					</App>
+				</Shell>
+			</mvc:View>

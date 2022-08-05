@@ -1,0 +1,28 @@
+/* Enter your custom styles here */
+
+.input {
+	border: 1px dotted ;
+	box-shadow: 3px 3px 30px 5px pink
+}
+
+.EmployeeList {
+	min-width: 600px;
+}
+
+.boldText {
+	font-weight: bold;
+}
+
+.sapSuiteIDCChartSegmentSelected {
+    fill: #e509d6 !important;
+}
+    
+.sapSuiteIDCChartSegmentSelected {
+    fill: #e509d6 !important;
+    stroke-width: 0px;
+}
+
+/*.sapSuiteIDCChartSegment {*/
+/*    fill: #e509d6 !important;*/
+/*    stroke-width: 0px;*/
+/*}*/

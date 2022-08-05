@@ -1,0 +1,44 @@
+[
+  {
+    "ProductID": 1,
+    "ProductName": "Melisa",
+    "UnitsInStock": 54,
+    "UnitsOnOrder": 20,
+    "UnitPrice": 9,
+    "SupplierID": 420,
+    "Discontinued": true,
+    "Supplier": {
+      "__deferred": {
+        "uri": "/Products(1)/Supplier"
+      }
+    }
+  },
+  {
+    "ProductID": 2,
+    "ProductName": "Aspirin",
+    "UnitsInStock": 63,
+    "UnitsOnOrder": 8,
+    "UnitPrice": 19,
+    "SupplierID": 1010,
+    "Discontinued": true,
+    "Supplier": {
+      "__deferred": {
+        "uri": "/Products(2)/Supplier"
+      }
+    }
+  },
+  {
+    "ProductID": 3,
+    "ProductName": "Nagroda",
+    "UnitsInStock": 92,
+    "UnitsOnOrder": 1,
+    "UnitPrice": 500,
+    "SupplierID": 997,
+    "Discontinued": false,
+    "Supplier": {
+      "__deferred": {
+        "uri": "/Products(3)/Supplier"
+      }
+    }
+  }
+  ]

@@ -1,0 +1,59 @@
+<mvc:View
+	controllerName="prs.client.controller.List"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc">
+	<f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="true" showFooter="true">
+		<!-- DynamicPage Title -->
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="Employee List"/>
+				</f:heading>
+			</f:DynamicPageTitle>
+		</f:title>
+
+		<!-- DynamicPage Content -->
+		<f:content>
+			<VBox fitContainer="true">
+				<OverflowToolbar>
+					<!--<Button icon="sap-icon://nav-back" press="onNavBack"/>-->
+					<Button icon="sap-icon://add" text="Add Employee" press="onNavBack"/>
+					<ToolbarSpacer/>
+					<SearchField search="onSearch" width="17.5rem"/>
+					<!--<OverflowToolbarButton icon="sap-icon://sort" text="Sort" type="Transparent" press=".onSort"/>-->
+				</OverflowToolbar>
+				<Table
+					id="EmployeeList"
+					items="{/Employees}"
+					fixedLayout="true"
+					popinLayout="Block">
+					<columns>
+						<Column width="12rem">
+							<Text text="Employee"/>
+						</Column>
+						<Column	hAlign="End" demandPopin="true" minScreenWidth="400px" popinDisplay="Block">
+							<Text text="Employee ID"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem type="Navigation" press="onListItemPress">
+							<cells>
+								<ObjectIdentifier title="{FirstName} {LastName}" text="{Function} {Department}"/>
+								<Text text="{EmployeeID}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</VBox>
+		</f:content>
+		<f:footer>
+			<Toolbar>
+				<Button id="messagePopoverBtn"
+					icon="sap-icon://error"
+					press="onShowMessagePopover"
+					/>
+			</Toolbar>
+		</f:footer>
+	</f:DynamicPage>
+</mvc:View>

@@ -1,0 +1,39 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+	<Popover
+		id="PersonPopover"
+		title="Person Details"
+		class="sapUiResponsivePadding--footer"
+		placement="PreferredLeftOrFlip">
+			<f:SimpleForm
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="true"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1">
+					<f:content>
+						<Label text="{i18n>Name}" /> 
+						<Text text="{FirstName} {LastName}" />
+						<Label text="{i18n>WorkHours}" /> 
+						<Text text="{CurrentMonthHours} / {appModel>/MonthWorkHoursPassed} hours (this month)"/>
+						<Label text="{i18n>Absent}" /> 
+						<Text text="{= ${appModel>/MonthWorkHoursPassed}-${appModel>/CurrentEmployeeMonthHours}} hours" />
+					</f:content>
+				</f:SimpleForm>
+				<footer>
+				<Button class="sapUiTinyMarginBegin sapUiTinyMarginBottom" icon="sap-icon://decline" text="Close" press="onClosebtn" />
+				</footer>
+	</Popover>
+</core:FragmentDefinition>

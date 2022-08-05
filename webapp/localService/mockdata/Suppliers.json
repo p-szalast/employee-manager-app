@@ -1,0 +1,35 @@
+[
+		{
+	    "SupplierID": 420,
+	    "CompanyName": "HealHerbs",
+	    "ContactName": "Giovani D.D.",
+	    "ContactTitle": "Company Manager",
+	    "Address": "Zaporowska 34a",
+	    "City": "Wrocław",
+	    "Region": "Dolnośląskie",
+	    "PostalCode": "53-456",
+	    "Country": "PL"
+		 },
+	  	{
+	    "SupplierID": 1010,
+	    "CompanyName": "Soap INC",
+	    "ContactName": "Roman B.",
+	    "ContactTitle": "Sales Manager",
+	    "Address": "Reymonta",
+	    "City": "Bździów",
+	    "Region": "Pomorskie",
+	    "PostalCode": "33-123",
+	    "Country": "PL"
+	  },
+	  	{
+	    "SupplierID": 997,
+	    "CompanyName": "Policion",
+	    "ContactName": "Henryk Rogal",
+	    "ContactTitle": "Porucznik Orbita",
+	    "Address": "Okopowa 5",
+	    "City": "Lublin",
+	    "Region": "Lubelskie",
+	    "PostalCode": "20-997",
+	    "Country": "PL"
+	  }
+	]

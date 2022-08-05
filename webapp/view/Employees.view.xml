@@ -1,0 +1,16 @@
+<mvc:View
+	controllerName="prs.client.controller.Employees"
+	displayBlock="true"
+	xmlns="sap.f"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.ui.layout.form">
+	<FlexibleColumnLayout id="flexibleColumnLayout" backgroundDesign="Solid">
+		<beginColumnPages>
+			<mvc:XMLView id="beginView" viewName="prs.client.view.List"/>
+		</beginColumnPages>
+		<midColumnPages>
+			<mvc:XMLView id="detailView" viewName="prs.client.view.Details"/>
+		</midColumnPages>
+	</FlexibleColumnLayout>
+</mvc:View>

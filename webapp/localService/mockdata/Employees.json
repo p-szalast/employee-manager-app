@@ -1,0 +1,43 @@
+[
+	{
+	"EmployeeID": 2723,
+	"FirstName": "Johny",
+	"LastName": "Johnson",
+	"Country": "Poland",
+	"City": "Rzeszów",
+	"PostCode": "20-375",
+	"Street": "Wierzbowa",
+	"HouseNumber": "34",
+	"FlatNumber": "53",
+	"Function": "Representative",
+	"Department": "Sales",
+	"PESEL": 92746375801,
+	"PhoneNumber": "342 234 234",
+	"CurrentMonthHours": 123,
+	"Image": "https://freeyourmindexperience.com/wp-content/uploads/person-icon-person-icon-clipart-image-from-our-icon-clipart-category-9-500x500.png",
+	"Salary": "10.000",
+	"Currency": "PLN",
+	"Supperior": "Andrzej Żyła"
+	
+	},
+	{
+	"EmployeeID": 2524,
+	"FirstName": "Henry",
+	"LastName": "Jackson",
+	"Country": "Poland",
+	"City": "Breslau",
+	"PostCode": "50-345",
+	"Street": "Street",
+	"HouseNumber": "9a",
+	"FlatNumber": "50",
+	"Function": "President",
+	"Department": "Management",
+	"PESEL": 93678382645,
+	"PhoneNumber": "123 736 523",
+	"CurrentMonthHours": 72,
+	"Image": "https://www.investnational.com.au/wp-content/uploads/2016/08/person-stock-2.png",
+	"Salary": "9.700",
+	"Currency": "PLN",
+	"Supperior": "Janusz Knieć"
+	}
+]

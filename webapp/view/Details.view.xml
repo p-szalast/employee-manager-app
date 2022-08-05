@@ -1,0 +1,273 @@
+<mvc:View
+	controllerName="prs.client.controller.Details"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:f="sap.f"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:layout="sap.ui.layout"
+	xmlns:chart="sap.suite.ui.microchart">
+	<ObjectPageLayout
+		id="ObjectPageLayout"
+		showTitleInHeaderContent="true"
+		alwaysShowContentHeader="false"
+		preserveHeaderStateOnScroll="true"
+		isChildPage="true"
+		upperCaseAnchorBar="false"
+		showFooter="true">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+					<navigationActions>
+					<m:OverflowToolbarButton
+						type="Transparent"
+						icon="sap-icon://decline"
+						press="onOneColumn"
+						tooltip="Close Employee Details"
+						visible="true"/>
+				</navigationActions>
+				
+				<actions>
+					<!--<m:ToggleButton-->
+					<!--	text="Edit"-->
+					<!--	type="Emphasized"/>-->
+					<!--<m:Button-->
+					<!--	text="Delete"-->
+					<!--	type="Transparent"/>-->
+					<!--<m:Button-->
+					<!--	text="Copy"-->
+					<!--	type="Transparent"/>-->
+					<!--<m:Button-->
+					<!--	icon="sap-icon://action"-->
+					<!--	type="Transparent"/>-->
+				</actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+		
+		
+		<headerContent>
+			
+		
+					
+
+			<m:FlexBox direction="Column" wrap="Wrap" alignItems="Start">
+				<f:Avatar
+					displaySize="L"
+					showBorder="true"
+					displayShape="Square"
+					class="sapUiSmallMarginBottom"
+					backgroundColor="Transparent"
+					src="{Image}">
+				</f:Avatar>
+	
+					<form:SimpleForm
+								editable="true"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1"
+								backgroundDesign="Transparent">
+								<form:content>
+										<m:Label text="First Name:" class="sapUiTinyMarginEnd"/>
+										<m:Text text="{FirstName}"/>
+										<m:Label text="Last Name:"/>
+										<m:Text text="{LastName}"/>
+										<m:Label text="Employee ID:"/>
+										<m:Text text="{EmployeeID}"/>
+								</form:content>
+							</form:SimpleForm>
+	
+			
+			</m:FlexBox>
+		</headerContent>
+		
+		<!--<headerContent>-->
+		<!--	<m:FlexBox wrap="Wrap" fitContainer="true" alignItems="Stretch">-->
+		<!--		<f:Avatar-->
+		<!--			displaySize="L"-->
+		<!--			displayShape="Square"-->
+		<!--			class="sapUiSmallMarginEnd">-->
+		<!--		</f:Avatar>-->
+		<!--		<m:VBox justifyContent="Center" class="sapUiMediumMarginEnd">-->
+		<!--			<m:Label text="First Name:"/>-->
+		<!--			<m:Text text="{FirstName}"/>-->
+		<!--		</m:VBox>-->
+		<!--		<m:VBox justifyContent="Center" class="sapUiMediumMarginEnd">-->
+		<!--			<m:Label text="Last Name:"/>-->
+		<!--			<m:Text text="{LastName}"/>-->
+		<!--		</m:VBox>-->
+		<!--		<m:VBox justifyContent="Center" class="sapUiMediumMarginEnd">-->
+		<!--			<m:Label text="Employee ID:"/>-->
+		<!--			<m:Text text="{EmployeeID}"/>-->
+		<!--		</m:VBox>-->
+		<!--	</m:FlexBox>-->
+		<!--</headerContent>-->
+		
+		<sections>
+			<ObjectPageSection title="{i18n>PersonalData}">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<m:VBox>
+							<form:SimpleForm
+								editable="true"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+									<m:Label text="{i18n>Function}"/>
+									<m:Text text="{Function} {Department}"/>
+									<m:Label text="{i18n>PESELNumber}"/>
+									<m:Text text="{PESEL}"/>
+									<m:Label text="{i18n>PhoneNumber}"/>
+									<m:Text text="{PhoneNumber}"/>
+								</form:content>
+							</form:SimpleForm>
+							</m:VBox>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection title="{i18n>Address}">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<m:VBox>
+								<form:SimpleForm
+								maxContainerCols="2"
+								editable="true"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+										
+												
+												<m:Label text="{i18n>StreetAddress}"/>
+												<m:Text text="{Street} {HouseNumber} / {FlatNumber}, {PostCode} {City}"/>
+												<m:Label text="{i18n>Country}"/>
+												<m:Text text="{Country}"/>
+
+										
+												
+												<!--<m:Label text="{i18n>Country}"/>-->
+												<!--<m:Text text="{Country}"/>-->
+												<!--<m:Label text="{i18n>City}"/>-->
+												<!--<m:Text text="{City}"/>-->
+												<!--<m:Label text="{i18n>PostCode}"/>-->
+												<!--<m:Text text="{PostCode}"/>-->
+										
+												<!--<m:Label text="{i18n>Street}"/>-->
+												<!--<m:Text text="{Street}"/>-->
+												<!--<m:Label text="{i18n>HouseNumber}"/>-->
+												<!--<m:Text text="{HouseNumber}"/>-->
+												<!--<m:Label text="{i18n>FlatNumber}"/>-->
+												<!--<m:Text text="{FlatNumber}"/>-->
+											</form:content>
+							</form:SimpleForm>
+							</m:VBox>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			
+				<ObjectPageSection title="{i18n>WorkHours}">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<m:VBox>
+								<m:Text text="option 1:"/>
+									<layout:Grid defaultSpan="XL6 L6 M6 S12">
+									<m:HBox justifyContent="Start">
+										
+										<m:Text text="Month workhours until now:" class="sapUiSmallMargin boldText" />
+										<m:Text text="{appModel>/MonthWorkHoursPassed}" class="sapUiSmallMargin"/>
+									</m:HBox>
+									<m:FlexBox width="20rem" height="10rem" alignItems="Start" justifyContent="SpaceBetween">
+										<m:items>
+											<chart:InteractiveDonutChart selectionChanged="onSelectionChanged">
+												<chart:segments>
+													<chart:InteractiveDonutChartSegment label="Worked" value="{CurrentMonthHours}" displayedValue="{CurrentMonthHours}" color="#e054ff"/>
+													<chart:InteractiveDonutChartSegment label="Absent" value="{= ${appModel>/MonthWorkHoursPassed}-${appModel>/CurrentEmployeeMonthHours}}" displayedValue="{ =${appModel>/MonthWorkHoursPassed}-{appModel>/CurrentEmployeeMonthHours}}"/>
+												</chart:segments>
+											</chart:InteractiveDonutChart>
+
+										</m:items>
+									</m:FlexBox>
+									</layout:Grid>
+										<m:Text text="option 2:"/>
+									<m:HBox>
+									
+										<m:Text text="Presence Rate:" class="sapUiSmallMargin boldText"/>
+									</m:HBox>
+									<chart:RadialMicroChart press="onSelectionChanged" size="M" percentage="{= ${appModel>/CurrentEmployeeMonthHours}/${appModel>/MonthWorkHoursPassed}*100}" alignContent="Right" valueColor="#e054ff"/>
+							</m:VBox>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			
+				<ObjectPageSection title="{i18n>WorkplaceData}">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+							<m:VBox>
+								<form:SimpleForm
+								maxContainerCols="2"
+								editable="true"
+								labelSpanL="12"
+								labelSpanM="12"
+								emptySpanL="0"
+								emptySpanM="0"
+								columnsL="1"
+								columnsM="1">
+								<form:content>
+										
+												
+												<m:Label text="{i18n>Supperior}"/>
+												<m:Text text="{Supperior}"/>
+												<m:Label text="{i18n>Salary}"/>
+												<m:Text text="{Salary} {Currency}"/>
+
+										
+												
+												<!--<m:Label text="{i18n>Country}"/>-->
+												<!--<m:Text text="{Country}"/>-->
+												<!--<m:Label text="{i18n>City}"/>-->
+												<!--<m:Text text="{City}"/>-->
+												<!--<m:Label text="{i18n>PostCode}"/>-->
+												<!--<m:Text text="{PostCode}"/>-->
+										
+												<!--<m:Label text="{i18n>Street}"/>-->
+												<!--<m:Text text="{Street}"/>-->
+												<!--<m:Label text="{i18n>HouseNumber}"/>-->
+												<!--<m:Text text="{HouseNumber}"/>-->
+												<!--<m:Label text="{i18n>FlatNumber}"/>-->
+												<!--<m:Text text="{FlatNumber}"/>-->
+											</form:content>
+							</form:SimpleForm>
+							</m:VBox>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+		
+		<!--<f:footer>-->
+		<!--	<m:Toolbar>-->
+		<!--		<m:Button id="messagePopoverBtn"-->
+		<!--			icon="sap-icon://error"-->
+		<!--			press="onShowMessagePopover"-->
+		<!--			/>-->
+		<!--	</m:Toolbar>-->
+		<!--</f:footer>-->
+	</ObjectPageLayout>
+</mvc:View>
